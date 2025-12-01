@@ -1,0 +1,1924 @@
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "food_entries"[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "food_entries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "consumed_at" datetime(6), "created_at" datetime(6) NOT NULL, "description" text, "notes" text, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251130013109)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2025-11-30 01:31:49.670424', '2025-11-30 01:31:49.670427') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '9806997e11171885802bf8319a1bb2f806250b5d', '2025-11-30 01:31:49.671765', '2025-11-30 01:31:49.671768') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.7ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-28 01:31:49.765637"], ["created_at", "2025-11-30 01:31:49.766718"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:31:49.766718"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:31:49.769847"], ["created_at", "2025-11-30 01:31:49.770381"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:31:49.770381"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:31:49.771389"], ["created_at", "2025-11-30 01:31:49.771794"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:31:49.771794"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Load (0.2ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/index" for 127.0.0.1 at 2025-11-29 20:31:49 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for FoodEntriesController):
+  
+actionpack (8.1.1) lib/abstract_controller/base.rb:149:in 'AbstractController::Base#process'
+actionview (8.1.1) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.1) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.1) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.1) lib/rails/engine/lazy_route_set.rb:60:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.4) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.4) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.4) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+railties (8.1.1) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+rack-test (2.2.0) lib/rack/test.rb:360:in 'Rack::Test::Session#process_request'
+rack-test (2.2.0) lib/rack/test.rb:153:in 'Rack::Test::Session#request'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:297:in 'ActionDispatch::Integration::Session#process'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:19:in 'ActionDispatch::Integration::RequestHelpers#get'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:388:in 'ActionDispatch::Integration::Runner#get'
+spec/requests/food_entries_spec.rb:6:in 'block (3 levels) in <main>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'block in RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'block in RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'block in RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'block in RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:626:in 'block in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-rails (8.0.2) lib/rspec/rails/adapters.rb:75:in 'block (2 levels) in <module:MinitestLifecycleAdapter>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'RSpec::Core::Example#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:390:in 'RSpec::Core::Hooks::AroundHook#execute_with'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:628:in 'block (2 levels) in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:629:in 'RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:259:in 'RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:653:in 'block in RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:614:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'block in RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (3 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (2 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/configuration.rb:2097:in 'RSpec::Core::Configuration#with_suite_hooks'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:116:in 'block in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/reporter.rb:74:in 'RSpec::Core::Reporter#report'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:115:in 'RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:89:in 'RSpec::Core::Runner#run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:71:in 'RSpec::Core::Runner.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:45:in 'RSpec::Core::Runner.invoke'
+rspec-core (3.13.6) exe/rspec:4:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:456:in 'Bundler::CLI#exec'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:28:in 'block in <top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:20:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in '<main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:31:50 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 5.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.6ms)
+Completed 200 OK in 35ms (Views: 10.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.7ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/create" for 127.0.0.1 at 2025-11-29 20:31:50 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for FoodEntriesController):
+  
+actionpack (8.1.1) lib/abstract_controller/base.rb:149:in 'AbstractController::Base#process'
+actionview (8.1.1) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.1) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.1) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.1) lib/rails/engine/lazy_route_set.rb:60:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.4) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.4) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.4) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+railties (8.1.1) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+rack-test (2.2.0) lib/rack/test.rb:360:in 'Rack::Test::Session#process_request'
+rack-test (2.2.0) lib/rack/test.rb:153:in 'Rack::Test::Session#request'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:297:in 'ActionDispatch::Integration::Session#process'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:19:in 'ActionDispatch::Integration::RequestHelpers#get'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:388:in 'ActionDispatch::Integration::Runner#get'
+spec/requests/food_entries_spec.rb:20:in 'block (3 levels) in <main>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'block in RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'block in RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'block in RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'block in RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:626:in 'block in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-rails (8.0.2) lib/rspec/rails/adapters.rb:75:in 'block (2 levels) in <module:MinitestLifecycleAdapter>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'RSpec::Core::Example#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:390:in 'RSpec::Core::Hooks::AroundHook#execute_with'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:628:in 'block (2 levels) in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:629:in 'RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:259:in 'RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:653:in 'block in RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:614:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'block in RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (3 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (2 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/configuration.rb:2097:in 'RSpec::Core::Configuration#with_suite_hooks'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:116:in 'block in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/reporter.rb:74:in 'RSpec::Core::Reporter#report'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:115:in 'RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:89:in 'RSpec::Core::Runner#run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:71:in 'RSpec::Core::Runner.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:45:in 'RSpec::Core::Runner.invoke'
+rspec-core (3.13.6) exe/rspec:4:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:456:in 'Bundler::CLI#exec'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:28:in 'block in <top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:20:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in '<main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  [1m[36mFoodEntry Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "food_entries" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 8.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.9ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:32:00.437259"], ["created_at", "2025-11-30 01:32:00.442994"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:00.442994"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:00.445450"], ["created_at", "2025-11-30 01:32:00.446006"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:00.446006"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  [1m[36mFoodEntry Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "food_entries" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:32:00 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:00"], ["created_at", "2025-11-30 01:32:00.476766"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:32:00.476766"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:32:00 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:00"], ["created_at", "2025-11-30 01:32:00.484988"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:32:00.484988"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-28 01:32:08.835471"], ["created_at", "2025-11-30 01:32:08.836663"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:08.836663"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:32:08.838727"], ["created_at", "2025-11-30 01:32:08.839214"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:08.839214"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:08.840075"], ["created_at", "2025-11-30 01:32:08.840388"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:08.840388"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Load (0.2ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  [1m[36mFoodEntry Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "food_entries" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:32:08.888235"], ["created_at", "2025-11-30 01:32:08.888881"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:08.888881"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:08.890162"], ["created_at", "2025-11-30 01:32:08.890675"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:08.890675"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  [1m[36mFoodEntry Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "food_entries" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFoodEntry Load (0.0ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:32:08 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:08"], ["created_at", "2025-11-30 01:32:08.913710"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:32:08.913710"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:32:08 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.7ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:08"], ["created_at", "2025-11-30 01:32:08.923552"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:32:08.923552"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:08 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-28 01:32:15.091088"], ["created_at", "2025-11-30 01:32:15.092281"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:15.092281"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:32:15.094846"], ["created_at", "2025-11-30 01:32:15.095305"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:15.095305"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:15.096499"], ["created_at", "2025-11-30 01:32:15.097141"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:15.097141"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Load (0.2ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  [1m[36mFoodEntry Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "food_entries" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:32:15.143325"], ["created_at", "2025-11-30 01:32:15.143938"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:15.143938"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:15.145207"], ["created_at", "2025-11-30 01:32:15.145888"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:32:15.145888"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  [1m[36mFoodEntry Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "food_entries" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFoodEntry Load (0.0ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:32:15 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:15"], ["created_at", "2025-11-30 01:32:15.168363"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:32:15.168363"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:32:15 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:32:15"], ["created_at", "2025-11-30 01:32:15.176453"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:32:15.176453"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:32:15 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "food_entries"[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "food_entries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "consumed_at" datetime(6), "created_at" datetime(6) NOT NULL, "description" text, "notes" text, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "gi_symptoms"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "gi_symptoms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "notes" text, "occurred_at" datetime(6), "severity" integer, "symptom_type" varchar, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251130013622)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20251130013109);[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2025-11-30 01:37:31.548202', '2025-11-30 01:37:31.548204') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '6212481eac1a7d168021bedbe349aaed17136cc3', '2025-11-30 01:37:31.549300', '2025-11-30 01:37:31.549302') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-28 01:37:31.636000"], ["created_at", "2025-11-30 01:37:31.637362"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:31.637362"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.6ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:37:31.639666"], ["created_at", "2025-11-30 01:37:31.640942"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:31.640942"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:31.642916"], ["created_at", "2025-11-30 01:37:31.643432"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:31.643432"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Load (0.2ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:31.666180"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-28 01:37:31.665317"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:31.666180"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:31.668956"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:37:31.668236"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:31.668956"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:31.671326"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:37:31.670758"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:31.671326"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:37:31.721147"], ["created_at", "2025-11-30 01:37:31.721978"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:31.721978"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:31.723329"], ["created_at", "2025-11-30 01:37:31.724218"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:31.724218"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:37:31 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:31"], ["created_at", "2025-11-30 01:37:31.743678"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:37:31.743678"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:37:31 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:31"], ["created_at", "2025-11-30 01:37:31.752293"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:37:31.752293"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/index" for 127.0.0.1 at 2025-11-29 20:37:31 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for GiSymptomsController):
+  
+actionpack (8.1.1) lib/abstract_controller/base.rb:149:in 'AbstractController::Base#process'
+actionview (8.1.1) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.1) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.1) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.1) lib/rails/engine/lazy_route_set.rb:60:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.4) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.4) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.4) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+railties (8.1.1) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+rack-test (2.2.0) lib/rack/test.rb:360:in 'Rack::Test::Session#process_request'
+rack-test (2.2.0) lib/rack/test.rb:153:in 'Rack::Test::Session#request'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:297:in 'ActionDispatch::Integration::Session#process'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:19:in 'ActionDispatch::Integration::RequestHelpers#get'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:388:in 'ActionDispatch::Integration::Runner#get'
+spec/requests/gi_symptoms_spec.rb:6:in 'block (3 levels) in <main>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'block in RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'block in RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'block in RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'block in RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:626:in 'block in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-rails (8.0.2) lib/rspec/rails/adapters.rb:75:in 'block (2 levels) in <module:MinitestLifecycleAdapter>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'RSpec::Core::Example#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:390:in 'RSpec::Core::Hooks::AroundHook#execute_with'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:628:in 'block (2 levels) in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:629:in 'RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:259:in 'RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:653:in 'block in RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:614:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'block in RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (3 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (2 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/configuration.rb:2097:in 'RSpec::Core::Configuration#with_suite_hooks'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:116:in 'block in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/reporter.rb:74:in 'RSpec::Core::Reporter#report'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:115:in 'RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:89:in 'RSpec::Core::Runner#run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:71:in 'RSpec::Core::Runner.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:45:in 'RSpec::Core::Runner.invoke'
+rspec-core (3.13.6) exe/rspec:4:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:456:in 'Bundler::CLI#exec'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:28:in 'block in <top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:20:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in '<main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/new" for 127.0.0.1 at 2025-11-29 20:37:32 -0500
+Processing by GiSymptomsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/create" for 127.0.0.1 at 2025-11-29 20:37:32 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for GiSymptomsController):
+  
+actionpack (8.1.1) lib/abstract_controller/base.rb:149:in 'AbstractController::Base#process'
+actionview (8.1.1) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.1) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.1) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.1) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.1) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.1) lib/rails/engine/lazy_route_set.rb:60:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.4) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.2.4) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.4) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.1.1) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/cookies.rb:708:in 'ActionDispatch::Cookies#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.1) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+railties (8.1.1) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+rack-test (2.2.0) lib/rack/test.rb:360:in 'Rack::Test::Session#process_request'
+rack-test (2.2.0) lib/rack/test.rb:153:in 'Rack::Test::Session#request'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:297:in 'ActionDispatch::Integration::Session#process'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:19:in 'ActionDispatch::Integration::RequestHelpers#get'
+actionpack (8.1.1) lib/action_dispatch/testing/integration.rb:388:in 'ActionDispatch::Integration::Runner#get'
+spec/requests/gi_symptoms_spec.rb:20:in 'block (3 levels) in <main>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:263:in 'block in RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'block in RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'block in RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'block in RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:626:in 'block in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-rails (8.0.2) lib/rspec/rails/adapters.rb:75:in 'block (2 levels) in <module:MinitestLifecycleAdapter>'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'BasicObject#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/example.rb:457:in 'RSpec::Core::Example#instance_exec'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:390:in 'RSpec::Core::Hooks::AroundHook#execute_with'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:628:in 'block (2 levels) in RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/example.rb:352:in 'RSpec::Core::Example::Procsy#call'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:629:in 'RSpec::Core::Hooks::HookCollections#run_around_example_hooks_for'
+rspec-core (3.13.6) lib/rspec/core/hooks.rb:486:in 'RSpec::Core::Hooks::HookCollections#run'
+rspec-core (3.13.6) lib/rspec/core/example.rb:468:in 'RSpec::Core::Example#with_around_example_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:511:in 'RSpec::Core::Example#with_around_and_singleton_context_hooks'
+rspec-core (3.13.6) lib/rspec/core/example.rb:259:in 'RSpec::Core::Example#run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:653:in 'block in RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:649:in 'RSpec::Core::ExampleGroup.run_examples'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:614:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'block in RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/example_group.rb:615:in 'RSpec::Core::ExampleGroup.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (3 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'Array#map'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:121:in 'block (2 levels) in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/configuration.rb:2097:in 'RSpec::Core::Configuration#with_suite_hooks'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:116:in 'block in RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/reporter.rb:74:in 'RSpec::Core::Reporter#report'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:115:in 'RSpec::Core::Runner#run_specs'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:89:in 'RSpec::Core::Runner#run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:71:in 'RSpec::Core::Runner.run'
+rspec-core (3.13.6) lib/rspec/core/runner.rb:45:in 'RSpec::Core::Runner.invoke'
+rspec-core (3.13.6) exe/rspec:4:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/ruby/3.4.0/bin/rspec:25:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Kernel.load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:456:in 'Bundler::CLI#exec'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:28:in 'block in <top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+/home/steve/.local/share/gem/ruby/3.4.0/gems/bundler-2.7.2/exe/bundle:20:in '<top (required)>'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in 'Kernel#load'
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle:25:in '<main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-28 01:37:46.040663"], ["created_at", "2025-11-30 01:37:46.041898"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:46.041898"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:37:46.044369"], ["created_at", "2025-11-30 01:37:46.044876"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:46.044876"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:46.045877"], ["created_at", "2025-11-30 01:37:46.046268"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:46.046268"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.069758"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-28 01:37:46.068847"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:46.069758"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.071515"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:37:46.071009"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:46.071515"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.073111"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:37:46.072625"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:46.073111"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Load (0.2ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:37:46.119927"], ["created_at", "2025-11-30 01:37:46.120806"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:46.120806"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:46.122282"], ["created_at", "2025-11-30 01:37:46.122957"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:46.122957"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:37:46 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:46"], ["created_at", "2025-11-30 01:37:46.143056"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:37:46.143056"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:37:46 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:46"], ["created_at", "2025-11-30 01:37:46.151819"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:37:46.151819"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.176801"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:37:46.176084"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:46.176801"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.178522"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:37:46.178052"], ["severity", 5], ["symptom_type", "Nausea"], ["updated_at", "2025-11-30 01:37:46.178522"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/new" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:37:46 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.209631"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:37:46"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:46.209631"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:37:46 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:46.215653"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:37:46"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:46.215653"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:46 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 36.4ms | GC: 32.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | GC: 32.8ms)
+Completed 422 Unprocessable Content in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 32.8ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-28 01:37:55.556392"], ["created_at", "2025-11-30 01:37:55.557490"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:55.557490"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:37:55.559743"], ["created_at", "2025-11-30 01:37:55.560189"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:55.560189"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.2ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:55.561080"], ["created_at", "2025-11-30 01:37:55.561388"], ["description", "Chicken and rice"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:55.561388"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Load (0.2ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.583782"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-28 01:37:55.582895"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:55.583782"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.585586"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:37:55.585004"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:55.585586"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.587390"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:37:55.586800"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:55.587390"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:37:55.635031"], ["created_at", "2025-11-30 01:37:55.635715"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:55.635715"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:55.636805"], ["created_at", "2025-11-30 01:37:55.637339"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:37:55.637339"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:37:55 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:55"], ["created_at", "2025-11-30 01:37:55.659651"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:37:55.659651"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:37:55 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:37:55"], ["created_at", "2025-11-30 01:37:55.668513"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:37:55.668513"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.698545"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:37:55.697825"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:55.698545"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (1.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.700461"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:37:55.699887"], ["severity", 5], ["symptom_type", "Nausea"], ["updated_at", "2025-11-30 01:37:55.700461"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/new" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:37:55 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.7ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.719543"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:37:55"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:55.719543"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:37:55 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:37:55.726639"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:37:55"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:37:55.726639"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:37:55 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 7.8ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:39:36.812400"], ["created_at", "2025-11-30 01:39:36.817873"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:39:36.817873"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:39:36.819989"], ["created_at", "2025-11-30 01:39:36.820436"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:39:36.820436"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:39:36 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:39:36"], ["created_at", "2025-11-30 01:39:36.842486"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:39:36.842486"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:39:36 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:39:36"], ["created_at", "2025-11-30 01:39:36.850321"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:39:36.850321"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:39:36.881719"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:39:36.877316"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:39:36.881719"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:39:36.884318"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:39:36.883216"], ["severity", 5], ["symptom_type", "Nausea"], ["updated_at", "2025-11-30 01:39:36.884318"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/new" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:39:36 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:39:36.900747"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:39:36"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:39:36.900747"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:39:36 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:39:36.907256"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:39:36"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:39:36.907256"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:39:36 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:40:59 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.2ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 7.1ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:41:00.023088"], ["created_at", "2025-11-30 01:41:00.028965"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:41:00.028965"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:41:00.031246"], ["created_at", "2025-11-30 01:41:00.031741"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:41:00.031741"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:41:00 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:41:00"], ["created_at", "2025-11-30 01:41:00.054097"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:41:00.054097"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:41:00 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:41:00"], ["created_at", "2025-11-30 01:41:00.061783"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:41:00.061783"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:41:00.093221"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:41:00.089124"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:41:00.093221"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:41:00.095388"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:41:00.094673"], ["severity", 5], ["symptom_type", "Nausea"], ["updated_at", "2025-11-30 01:41:00.095388"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/new" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:41:00 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:41:00.112836"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:41:00"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:41:00.112836"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:41:00 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:41:00.118845"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:41:00"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:41:00.118845"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:41:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 7.1ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:52:00.729728"], ["created_at", "2025-11-30 01:52:00.735669"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:52:00.735669"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:52:00.737781"], ["created_at", "2025-11-30 01:52:00.738535"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:52:00.738535"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:52:00 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:52:00"], ["created_at", "2025-11-30 01:52:00.757924"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:52:00.757924"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:52:00 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:52:00"], ["created_at", "2025-11-30 01:52:00.765792"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:52:00.765792"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.5ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:52:00.795946"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-29 01:52:00.791546"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:52:00.795946"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.4ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:52:00.798865"], ["notes", "Normal consistency"], ["occurred_at", "2025-11-30 01:52:00.798282"], ["severity", 5], ["symptom_type", "Nausea"], ["updated_at", "2025-11-30 01:52:00.798865"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/index.html.erb within layouts/application
+  [1m[36mGiSymptom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "gi_symptoms" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendered gi_symptoms/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/gi_symptoms/new" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:52:00 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:52:00.814862"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:52:00"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:52:00.814862"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "Bowel Movement", "occurred_at" => "2025-11-30 01:52:00 UTC", "severity" => "5", "notes" => "Normal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGiSymptom Create (0.3ms)[0m  [1m[32mINSERT INTO "gi_symptoms" ("created_at", "notes", "occurred_at", "severity", "symptom_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["created_at", "2025-11-30 01:52:00.820782"], ["notes", "Normal"], ["occurred_at", "2025-11-30 01:52:00"], ["severity", 5], ["symptom_type", "Bowel Movement"], ["updated_at", "2025-11-30 01:52:00.820782"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mGiSymptom Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "gi_symptoms"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/gi_symptoms" for 127.0.0.1 at 2025-11-29 20:52:00 -0500
+Processing by GiSymptomsController#create as HTML
+  Parameters: {"gi_symptom" => {"symptom_type" => "", "occurred_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering gi_symptoms/new.html.erb within layouts/application
+  Rendered gi_symptoms/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 7.3ms | ActiveRecord: 1.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:52:56.307747"], ["created_at", "2025-11-30 01:52:56.313420"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:52:56.313420"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:52:56.315891"], ["created_at", "2025-11-30 01:52:56.317088"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:52:56.317088"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:52:56 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:52:56"], ["created_at", "2025-11-30 01:52:56.335405"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:52:56.335405"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:52:56 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:52:56"], ["created_at", "2025-11-30 01:52:56.345290"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:52:56.345290"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:52:56 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.1ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 7.5ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.4ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-29 01:53:47.209532"], ["created_at", "2025-11-30 01:53:47.216322"], ["description", "Breakfast"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:53:47.216322"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:53:47.218826"], ["created_at", "2025-11-30 01:53:47.219352"], ["description", "Lunch"], ["notes", "Tasted good"], ["updated_at", "2025-11-30 01:53:47.219352"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/food_entries" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#index as HTML
+  [1m[36mFoodEntry Load (0.1ms)[0m  [1m[34mSELECT "food_entries".* FROM "food_entries" ORDER BY "food_entries"."consumed_at" DESC[0m
+  [1m[36mGiSymptom Load (0.0ms)[0m  [1m[34mSELECT "gi_symptoms".* FROM "gi_symptoms" ORDER BY "gi_symptoms"."occurred_at" DESC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/index.html.erb within layouts/application
+  Rendered food_entries/index.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms (2 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started GET "/food_entries/new" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:53:47 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.7ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:53:47"], ["created_at", "2025-11-30 01:53:47.237833"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:53:47.237833"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "Dinner", "consumed_at" => "2025-11-30 01:53:47 UTC", "notes" => "Delicious meal"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFoodEntry Create (0.3ms)[0m  [1m[32mINSERT INTO "food_entries" ("consumed_at", "created_at", "description", "notes", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["consumed_at", "2025-11-30 01:53:47"], ["created_at", "2025-11-30 01:53:47.247506"], ["description", "Dinner"], ["notes", "Delicious meal"], ["updated_at", "2025-11-30 01:53:47.247506"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/food_entries
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mFoodEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "food_entries"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TRANSACTION[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mBEGIN deferred TRANSACTION[0m
+Started POST "/food_entries" for 127.0.0.1 at 2025-11-29 20:53:47 -0500
+Processing by FoodEntriesController#create as HTML
+  Parameters: {"food_entry" => {"description" => "", "consumed_at" => nil}}
+  Rendering layout layouts/application.html.erb
+  Rendering food_entries/new.html.erb within layouts/application
+  Rendered food_entries/new.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION[0m

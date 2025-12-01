@@ -1,0 +1,69 @@
+---
+description: Rails Project Standards
+globs: "**/*.rb"
+---
+
+# Rails Project Standards
+
+## Code Style
+
+- Follow Ruby style guide (https://rubystyle.guide/)
+- Use 2 spaces for indentation
+- Prefer single quotes for strings unless interpolation needed
+- Use meaningful variable and method names
+- Keep methods small and focused (single responsibility)
+
+## Testing Requirements
+
+- **ALL code must have tests**
+- Write tests before implementation (TDD)
+- Test coverage target: 90%+
+- Use RSpec for testing
+- Use FactoryBot for test data
+- Test models, controllers, and integrations
+
+## Model Guidelines
+
+- Keep models thin (business logic only)
+- Use validations for data integrity
+- Use scopes for common queries
+- Always scope queries to current_user for multi-user data
+- Use `dependent: :destroy` or `dependent: :delete_all` appropriately
+
+## Controller Guidelines
+
+- Keep controllers thin (delegate to models/services)
+- Use strong parameters
+- Always authenticate users (before_action :authenticate_user!)
+- Scope all queries to current_user
+- Use standard RESTful actions
+- Return appropriate HTTP status codes
+
+## Security
+
+- Never trust user input - always validate
+- Always scope database queries to current_user
+- Use Rails CSRF protection (enabled by default)
+- Use strong parameters for mass assignment
+- Never expose user data to other users
+
+## Database
+
+- Use migrations for all schema changes
+- Add indexes for foreign keys and frequently queried columns
+- Use timestamps (created_at, updated_at) on all models
+- Use appropriate data types
+
+## Git Workflow
+
+- Write meaningful commit messages
+- Commit related changes together
+- Test before committing
+- Keep commits focused and atomic
+
+## Documentation
+
+- Document complex logic with comments
+- Keep README updated
+- Document API endpoints if applicable
+- Update PROJECT_PLAN.md as features are completed

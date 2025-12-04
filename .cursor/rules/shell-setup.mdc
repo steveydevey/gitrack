@@ -1,0 +1,49 @@
+---
+description: Shell Environment Setup Notes
+globs: []
+---
+
+# Shell Environment Setup
+
+## Issue: Bundle Command Not Found
+
+When running commands in the Cursor AI environment, `bundle` may not be found because the shell doesn't automatically source `~/.bashrc` where the gem bin directory is added to PATH.
+
+## Solution
+
+The gem bin directory is: `/home/steve/.local/share/gem/ruby/3.4.0/bin`
+
+### Option 1: Export PATH in Commands
+
+When running bundle commands, prefix with PATH export:
+
+```bash
+export PATH=$PATH:/home/steve/.local/share/gem/ruby/3.4.0/bin && bundle exec rspec
+```
+
+### Option 2: Use Full Path
+
+Use the full path to bundle:
+
+```bash
+/home/steve/.local/share/gem/ruby/3.4.0/bin/bundle exec rspec
+```
+
+### Option 3: Source bashrc
+
+Run commands in a bash shell that sources bashrc:
+
+```bash
+bash -c "source ~/.bashrc && bundle exec rspec"
+```
+
+## Recommended Approach
+
+For Cursor AI tool calls, use Option 1 (export PATH) as it's the most reliable and doesn't require full paths or shell spawning.
+
+## Ruby Version
+
+Current Ruby version: 3.4.7  
+Gem directory: `/home/steve/.local/share/gem/ruby/3.4.0`
+
+Note: Even though Ruby is 3.4.7, gems are installed in the 3.4.0 directory structure.

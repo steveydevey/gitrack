@@ -1,0 +1,93 @@
+<% content_for :page_title, "Days with Accidents" %>
+<div>
+  <% if @days_with_records.any? %>
+    <% @days_with_records.each do |day_data| %>
+      <% 
+        date = day_data[:date]
+        entries = day_data[:entries]
+      %>
+      <div style="margin-bottom: 40px; border: 2px solid #FF9800; border-radius: 8px; padding: 20px; background-color: #FFF8E1;">
+        <h2 style="margin-top: 0; margin-bottom: 20px; color: #000; font-size: 24px; font-weight: bold; border-bottom: 2px solid #FF9800; padding-bottom: 10px;">
+          <%= date.strftime("%B %d, %Y") %>
+          <%= link_to "View Day", root_path(date: date), style: "font-size: 14px; color: #2196F3; text-decoration: none; margin-left: 10px; font-weight: normal;" %>
+        </h2>
+        
+        <% if entries.any? %>
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2; color: #000;">Type</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2; color: #000;">Description / Symptom</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2; color: #000;">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% entries.each do |item| %>
+                <% 
+                  # Determine background color and edit path
+                  if item[:type] == 'food'
+                    bg_color = '#E8F5E9'
+                    edit_path = edit_food_entry_path(item[:entry], return_to: request.url)
+                  elsif item[:type] == 'bowel_movement'
+                    bg_color = '#F3E5F5'
+                    edit_path = edit_bowel_movement_path(item[:entry], return_to: request.url)
+                  elsif item[:type] == 'accident'
+                    bg_color = '#FFF3E0'
+                    edit_path = edit_accident_path(item[:entry], return_to: request.url)
+                  elsif item[:type] == 'miralax_cap'
+                    bg_color = '#E1F5FE'
+                    edit_path = edit_miralax_cap_path(item[:entry], return_to: request.url)
+                  end
+                  
+                  # Format time only (date is in header)
+                  formatted_time = item[:datetime].strftime("%l:%M %p").strip
+                %>
+                <tr onclick="window.location.href='<%= edit_path %>'" style="cursor: pointer;">
+                  <td style="padding: 12px; border: 1px solid #ddd; background-color: <%= bg_color %>; color: #000;">
+                    <% if item[:type] == 'food' %>
+                      <span style="background-color: #4CAF50; color: white; padding: 4px 8px; border-radius: 3px; font-size: 12px;">FOOD</span>
+                    <% elsif item[:type] == 'bowel_movement' %>
+                      <span style="background-color: #9C27B0; color: white; padding: 4px 8px; border-radius: 3px; font-size: 12px;">BM</span>
+                    <% elsif item[:type] == 'accident' %>
+                      <span style="background-color: #FF9800; color: white; padding: 4px 8px; border-radius: 3px; font-size: 12px;">ACCIDENT</span>
+                    <% elsif item[:type] == 'miralax_cap' %>
+                      <span style="background-color: #00BCD4; color: white; padding: 4px 8px; border-radius: 3px; font-size: 12px;">MIRALAX</span>
+                    <% end %>
+                  </td>
+                  <td style="padding: 12px; border: 1px solid #ddd; background-color: <%= bg_color %>; color: #000;">
+                    <% if item[:type] == 'food' %>
+                      <%= item[:entry].description %>
+                    <% elsif item[:type] == 'bowel_movement' %>
+                      <% if item[:entry].severity.present? %>
+                        <%= item[:entry].severity %> - <%= item[:entry].severity_term %>
+                      <% else %>
+                        -
+                      <% end %>
+                    <% elsif item[:type] == 'accident' %>
+                      <%= item[:entry].accident_type_label || '-' %>
+                    <% elsif item[:type] == 'miralax_cap' %>
+                      <%= item[:entry].amount_label || '-' %>
+                    <% end %>
+                  </td>
+                  <td style="padding: 12px; border: 1px solid #ddd; background-color: <%= bg_color %>; color: #000;">
+                    <%= formatted_time %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          <p style="margin-top: 10px; color: #000;">
+            No entries for this day.
+          </p>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <p style="margin-top: 20px; color: #000;">
+      No accidents recorded yet. 
+      <%= link_to "Add an accident", new_accident_path(return_to: request.url) %> to see records for days with accidents.
+    </p>
+  <% end %>
+</div>
+

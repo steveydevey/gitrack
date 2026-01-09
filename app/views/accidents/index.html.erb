@@ -24,7 +24,11 @@
       </tbody>
     </table>
   <% else %>
-    <p style="margin-top: 20px; color: #000;">No accidents yet. <%= link_to "Create your first entry", new_accident_path %>.</p>
+    <%= render 'shared/no_results',
+      message: "No accidents yet",
+      links: capture do %>
+        <%= link_to "Create your first entry", new_accident_path %>.
+      <% end %>
   <% end %>
 </div>
 

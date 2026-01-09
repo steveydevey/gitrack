@@ -66,13 +66,14 @@
       </tbody>
     </table>
   <% else %>
-    <p style="margin-top: 20px; color: #000;">
-      No entries yet. 
-      <%= link_to "Create your first food entry", new_food_entry_path %>, 
-      <%= link_to "add a bowel movement", new_bowel_movement_path %>, 
-      <%= link_to "add an accident", new_accident_path %>, or 
-      <%= link_to "add a miralax cap", new_miralax_cap_path %>.
-    </p>
+    <%= render 'shared/no_results',
+      message: "No entries yet",
+      links: capture do %>
+        <%= link_to "Create your first food entry", new_food_entry_path %>,
+        <%= link_to "add a bowel movement", new_bowel_movement_path %>,
+        <%= link_to "add an accident", new_accident_path %>, or
+        <%= link_to "add a miralax cap", new_miralax_cap_path %>.
+      <% end %>
   <% end %>
 </div>
 

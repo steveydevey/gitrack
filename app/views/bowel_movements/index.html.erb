@@ -24,6 +24,10 @@
       </tbody>
     </table>
   <% else %>
-    <p style="margin-top: 20px; color: #000;">No bowel movements yet. <%= link_to "Create your first entry", new_bowel_movement_path %>.</p>
+    <%= render 'shared/no_results',
+      message: "No bowel movements yet",
+      links: capture do %>
+        <%= link_to "Create your first entry", new_bowel_movement_path %>.
+      <% end %>
   <% end %>
 </div>
